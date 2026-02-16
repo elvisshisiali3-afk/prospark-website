@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ProSpark Cleaning Hub - Professional cleaning services for residential, commercial, and industrial properties.">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <title>ProSpark Cleaning Hub - Professional Cleaning Excellence</title>
+  
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f172a' width='100' height='100'/><text x='50' y='75' font-size='60' font-weight='bold' text-anchor='middle' fill='%23c9a961' font-family='Arial'>P</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%230f172a' width='192' height='192' rx='45'/><text x='96' y='140' font-size='120' font-weight='bold' text-anchor='middle' fill='%23c9a961' font-family='Arial'>P</text></svg>">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-brand">
+      <span class="nav-brand-icon">✨</span>
+      <span>ProSpark</span>
+    </div>
+    
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    
+    <div class="nav-actions">
+      <button id="theme-toggle" style="background: none; border: none; color: var(--color-pearl-white); font-size: 1.25rem; cursor: pointer;">☀️</button>
+
+      <a href="booking.html" class="btn btn-primary btn-sm" data-auth="protected" style="display: none;">Book Now</a>
+      <a href="login.html" class="btn btn-secondary btn-sm" data-auth="public" style="display: none;">Login</a>
+      <button id="user-menu" class="btn btn-secondary btn-sm" data-auth="protected" style="display: none;">Profile</button>
+      
+      <button class="hamburger">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero" id="home">
+    <div class="hero-content">
+      <h1>Professional Cleaning Excellence</h1>
+      <p>Enterprise-grade cleaning solutions for residential, commercial, industrial, and specialized properties across Nairobi, Kenya</p>
+      <div style="margin-top: 2rem;">
+        <a href="booking.html" class="btn btn-primary btn-lg" data-auth="protected" style="display: none;">Book a Service</a>
+        <a href="login.html" class="btn btn-secondary btn-lg" data-auth="public" style="display: none;">Get Started</a>
+        <a href="#services" class="btn btn-secondary btn-lg" style="margin-left: 1rem;">Explore Services</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Statistics Section -->
+  <section style="background: var(--gradient-primary); color: var(--color-pearl-white); padding: 3rem var(--space-xl);">
+    <div class="container">
+      <div class="grid grid-cols-4">
+        <div class="stat">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">1000+</div>
+          <div class="stat-label">Jobs Completed</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">17</div>
+          <div class="stat-label">Service Types</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">4.8★</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <p class="section-subtitle">Comprehensive cleaning solutions for every need</p>
+      
+      <div class="grid grid-cols-3">
+        <!-- Enterprise Service 1 -->
+        <div class="service-card glassmorphism">
+          <div class="service-icon">🏠</div>
+          <h3>Smart Residential Cleaning</h3>
+          <p>AI-powered home cleaning with smart scheduling & eco-friendly options</p>
+          <div class="service-meta"><span>From Ksh 5,000</span></div>
+          <a href="booking.html?service=residential" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+
+        <!-- Enterprise Service 2 -->
+        <div class="service-card glassmorphism">
+          <div class="service-icon">🏢</div>
+          <h3>Apartment Management</h3>
+          <p>Professional property management cleaning for multi-unit buildings</p>
+          <div class="service-meta"><span>From Ksh 4,000</span></div>
+          <a href="booking.html?service=apartment" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+
+        <!-- Enterprise Service 3 -->
+        <div class="service-card glassmorphism">
+          <div class="service-icon">🏛️</div>
+          <h3>Smart Office Maintenance</h3>
+          <p>Enterprise-grade office cleaning with after-hours service</p>
+          <div class="service-meta"><span>From Ksh 15,000</span></div>
+          <a href="booking.html?service=office" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+
+        <!-- Enterprise Service 4 -->
+        <div class="service-card glassmorphism">
+          <div class="service-icon">🏥</div>
+          <h3>Hospital-Grade Sanitation</h3>
+          <p>Certified medical facility cleaning with infection control</p>
+          <div class="service-meta"><span>From Ksh 25,000</span></div>
+          <a href="booking.html?service=hospital" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+
+        <!-- Enterprise Service 5 -->
+        <div class="service-card glassmorphism">
+          <div class="service-icon">🏨</div>
+          <h3>Hotel & Airbnb Turnover</h3>
+          <p>Rapid turnover service for hospitality with express options</p>
+          <div class="service-meta"><span>From Ksh 3,500</span></div>
+          <a href="booking.html?service=hospitality" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+
+        <!-- Enterprise Service 6 -->
+        <div class="service-card glassmorphism">
+          <div class="service-icon">🏭</div>
+          <h3>Industrial Hygiene</h3>
+          <p>Heavy-duty cleaning for factories, warehouses & plants</p>
+          <div class="service-meta"><span>From Ksh 30,000</span></div>
+          <a href="booking.html?service=industrial" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+
+        <!-- Enterprise Service 7 -->
+        <div class="service-card glassmorphism">
+          <div class="service-icon">💧</div>
+          <h3>Water Tank Cleaning</h3>
+          <p>Professional tank cleaning with inspection & certification</p>
+          <div class="service-meta"><span>From Ksh 8,000</span></div>
+          <a href="booking.html?service=watertank" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+
+        <!-- Enterprise Service 8 -->
+        <div class="service-card glassmorphism">
+          <div class="service-icon">☀️</div>
+          <h3>Solar Panel Maintenance</h3>
+          <p>Panel cleaning with efficiency testing & monitoring</p>
+          <div class="service-meta"><span>From Ksh 6,000</span></div>
+          <a href="booking.html?service=solar" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+
+        <!-- Enterprise Service 9 -->
+        <div class="service-card glassmorphism">
+          <div class="service-icon">🎉</div>
+          <h3>Event & Disaster Cleanup</h3>
+          <p>Rapid response cleanup for events & emergencies</p>
+          <div class="service-meta"><span>From Ksh 10,000</span></div>
+          <a href="booking.html?service=event" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+
+        <!-- Enterprise Service 10 -->
+        <div class="service-card glassmorphism">
+          <div class="service-icon">☣️</div>
+          <h3>Biohazard & Fumigation</h3>
+          <p>Certified biohazard cleanup & fumigation services</p>
+          <div class="service-meta"><span>From Ksh 35,000</span></div>
+          <a href="booking.html?service=biohazard" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+
+        <!-- Enterprise Service 11 -->
+        <div class="service-card glassmorphism">
+          <div class="service-icon">🌿</div>
+          <h3>Green Cleaning (Eco Mode)</h3>
+          <p>Environmentally friendly cleaning with organic products</p>
+          <div class="service-meta"><span>From Ksh 6,000</span></div>
+          <a href="booking.html?service=green" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+
+        <!-- Enterprise Service 12 -->
+        <div class="service-card glassmorphism">
+          <div class="service-icon">✨</div>
+          <h3>Specialized Deep Cleaning</h3>
+          <p>Comprehensive deep cleaning for thorough sanitization</p>
+          <div class="service-meta"><span>From Ksh 8,000</span></div>
+          <a href="booking.html?service=deepclean" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; text-align: center;">
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+          ✨ <strong>12 Enterprise Services</strong> | AI-Powered | 24/7 Support | Certified Technicians
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing">
+    <div class="container">
+      <h2>Service Pricing</h2>
+      <p class="section-subtitle">Transparent pricing with flexible payment options</p>
+      
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>One-Time</th>
+            <th>Weekly</th>
+            <th>Monthly</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Residential Home Cleaning</strong></td>
+            <td class="price">3,500 KES</td>
+            <td class="price">2,800 KES</td>
+            <td class="price">2,450 KES</td>
+            <td>4 hours</td>
+          </tr>
+          <tr>
+            <td><strong>Apartment Cleaning</strong></td>
+            <td class="price">2,500 KES</td>
+            <td class="price">2,000 KES</td>
+            <td class="price">1,750 KES</td>
+            <td>3 hours</td>
+          </tr>
+          <tr>
+            <td><strong>Office & Corporate</strong></td>
+            <td class="price">8,000 KES</td>
+            <td class="price">6,400 KES</td>
+            <td class="price">5,600 KES</td>
+            <td>6 hours</td>
+          </tr>
+          <tr>
+            <td><strong>Hospital & Clinic</strong></td>
+            <td class="price">15,000 KES</td>
+            <td class="price">12,000 KES</td>
+            <td class="price">10,500 KES</td>
+            <td>8 hours</td>
+          </tr>
+          <tr>
+            <td><strong>Deep Sanitization</strong></td>
+            <td class="price">6,000 KES</td>
+            <td class="price">N/A</td>
+            <td class="price">4,200 KES</td>
+            <td>4 hours</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top: 2rem; color: var(--text-secondary); text-align: center;">
+        * All prices are in Kenyan Shillings (KES). Discounts apply for recurring services.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" style="background: var(--bg-tertiary);">
+    <div class="container">
+      <h2>About ProSpark</h2>
+      
+      <div class="grid grid-cols-2" style="margin-top: 2rem;">
+        <div>
+          <h3>Our Mission</h3>
+          <p>To deliver premium, professional cleaning services that exceed expectations while maintaining the highest standards of quality, integrity, and environmental responsibility.</p>
+          
+          <h3 style="margin-top: 1.5rem;">Our Vision</h3>
+          <p>To be Kenya's most trusted and innovative cleaning service provider, recognized for excellence and customer satisfaction.</p>
+        </div>
+
+        <div>
+          <h3>Company Details</h3>
+          <p><strong>Name:</strong> ProSpark Cleaning Hub Limited</p>
+          <p><strong>Location:</strong> Nairobi, Kenya</p>
+          <p><strong>Email:</strong> prosparkcleaninghub@gmail.com</p>
+          <p><strong>Phone:</strong> +254 799 802 509 / +254 741 156 566</p>
+          <p><strong>WhatsApp:</strong> +254 799 802 509</p>
+
+          <h4 style="margin-top: 1rem;">Leadership</h4>
+          <p><strong>Elvis Shisiali</strong> - Managing Director</p>
+          <p><strong>Bernard Keragu</strong> - Operations Director</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3" style="margin-top: 2rem;">
+        <div class="card" style="text-align: center;">
+          <p style="font-size: 2.5rem; margin: 0;">✓</p>
+          <h4>ISO Certified</h4>
+          <p>Meets international quality standards</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <p style="font-size: 2.5rem; margin: 0;">🛡️</p>
+          <h4>Fully Insured</h4>
+          <p>Complete coverage for your peace of mind</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <p style="font-size: 2.5rem; margin: 0;">⭐</p>
+          <h4>Eco-Friendly</h4>
+          <p>Sustainable and safe cleaning products</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <div class="container">
+      <h2>Client Testimonials</h2>
+      <p class="section-subtitle">What our satisfied clients say about us</p>
+
+      <div class="grid grid-cols-3">
+        <div class="testimonial-card">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-text">"ProSpark's attention to detail is unmatched. They transformed our office with their professional approach and eco-friendly products."</p>
+          <p class="testimonial-author">— Margaret Njoroge, Corporate Office Manager</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-text">"Reliable, efficient, and affordable. We've been using ProSpark for our residential cleaning for over a year. Highly recommended!"</p>
+          <p class="testimonial-author">— James Kariuki, Homeowner</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-text">"Professional team that understands the importance of hygiene in healthcare facilities. Our clinic has never been cleaner."</p>
+          <p class="testimonial-author">— Dr. Sarah Kipchoge, Clinic Director</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="background: var(--color-midnight-blue); color: var(--color-pearl-white);">
+    <div class="container">
+      <h2 style="color: var(--color-champagne-gold);">Get In Touch</h2>
+      <p class="section-subtitle" style="color: var(--color-pearl-white);">We're here to help with your cleaning needs</p>
+
+      <div class="grid grid-cols-3">
+        <div style="text-align: center;">
+          <p style="font-size: 2.5rem; margin-bottom: 0.5rem;">📞</p>
+          <h4>Phone</h4>
+          <p><a href="tel:+254799802509" style="color: var(--color-champagne-gold);">+254 799 802 509</a></p>
+          <p><a href="tel:+254741156566" style="color: var(--color-champagne-gold);">+254 741 156 566</a></p>
+        </div>
+
+        <div style="text-align: center;">
+          <p style="font-size: 2.5rem; margin-bottom: 0.5rem;">📧</p>
+          <h4>Email</h4>
+          <p><a href="mailto:prosparkcleaninghub@gmail.com" style="color: var(--color-champagne-gold);">prosparkcleaninghub@gmail.com</a></p>
+        </div>
+
+        <div style="text-align: center;">
+          <p style="font-size: 2.5rem; margin-bottom: 0.5rem;">💬</p>
+          <h4>WhatsApp</h4>
+          <p><a href="https://wa.me/254799802509" style="color: var(--color-champagne-gold);">Message us on WhatsApp</a></p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="booking.html" class="btn btn-primary btn-lg" data-auth="protected" style="display: none;">Book Now</a>
+        <a href="login.html" class="btn btn-secondary btn-lg" data-auth="public" style="display: none;">Login to Book</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Modal -->
+  <div id="booking-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Book Service: <span id="booking-service-display">Select Service</span></h3>
+        <button class="modal-close">×</button>
+      </div>
+      <form id="booking-form">
+        <input type="hidden" id="booking-service-input">
+        
+        <div class="form-group">
+          <label>Date *</label>
+          <input type="date" id="booking-date" required>
+        </div>
+
+        <div class="form-group">
+          <label>Time *</label>
+          <select id="booking-time" required>
+            <option value="">Select Time</option>
+            <option value="09:00">09:00 AM</option>
+            <option value="10:00">10:00 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="14:00">2:00 PM</option>
+            <option value="15:00">3:00 PM</option>
+            <option value="16:00">4:00 PM</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Frequency</label>
+          <select id="booking-frequency">
+            <option value="one-time">One-Time</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Price Estimate</label>
+          <p id="price-estimate" style="font-size: 1.25rem; font-weight: bold; color: var(--color-champagne-gold); margin: 0;">-</p>
+        </div>
+
+        <div class="form-group">
+          <label>Address *</label>
+          <input type="text" id="booking-address" placeholder="Enter service address" required>
+        </div>
+
+        <div class="form-group">
+          <label>Phone *</label>
+          <input type="tel" id="booking-phone" placeholder="0700000000" required>
+        </div>
+
+        <div class="form-group">
+          <label>Special Notes</label>
+          <textarea id="booking-notes" placeholder="Any special requirements..."></textarea>
+        </div>
+
+        <div style="display: flex; gap: 1rem;">
+          <button type="submit" class="btn btn-primary flex-1">Confirm Booking</button>
+          <button type="button" class="btn btn-secondary flex-1" onclick="document.getElementById('booking-modal').classList.remove('active')">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h4>ProSpark</h4>
+          <p>Professional cleaning services for residential, commercial, and industrial properties across Kenya.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="booking.html" data-auth="protected" style="display: none;">Book Service</a></li>
+            <li><a href="login.html" data-auth="public" style="display: none;">Login</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+254799802509">+254 799 802 509</a></li>
+            <li><a href="tel:+254741156566">+254 741 156 566</a></li>
+            <li><a href="mailto:prosparkcleaninghub@gmail.com">prosparkcleaninghub@gmail.com</a></li>
+            <li><a href="https://wa.me/254799802509">WhatsApp</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <p>Available on all major platforms</p>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <p>&copy; 2026 ProSpark Cleaning Hub Limited. All rights reserved. | Nairobi, Kenya</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Alert Container -->
+  <div id="alerts-container"></div>
+
+  <!-- Enterprise Scripts -->
+  <script src="js/core/enterpriseServices.js"></script>
+  <script src="js/auth/enterpriseAuth.js"></script>
+  <script src="js/crm/crmManager.js"></script>
+  <script src="js/finance/financeManager.js"></script>
+  <script src="js/operations/operationsManager.js"></script>
+  <script src="js/analytics/analyticsEngine.js"></script>
+  <script src="js/admin/adminManager.js"></script>
+  <script src="js/mobile/mobileManager.js"></script>
+  
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

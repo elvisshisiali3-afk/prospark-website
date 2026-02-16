@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ProSpark Cleaning Hub - Login to your account">
+  <title>Login - ProSpark Cleaning Hub</title>
+  
+  <link rel="manifest" href="manifest.json">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  
+  <style>
+    .auth-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+    }
+
+    .auth-form-side {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: var(--bg-primary);
+    }
+
+    .auth-form-wrapper {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .auth-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .auth-header h1 {
+      font-size: var(--font-size-3xl);
+      margin: 0 0 0.5rem 0;
+    }
+
+    .auth-header p {
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    .auth-brand-logo {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .auth-side-visual {
+      background: var(--gradient-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-pearl-white);
+    }
+
+    .auth-side-content h2 {
+      color: var(--color-champagne-gold);
+      margin-top: 0;
+    }
+
+    .auth-sides-divider {
+      text-align: center;
+      margin: 1.5rem 0;
+      position: relative;
+    }
+
+    .auth-sides-divider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--border-color);
+    }
+
+    .auth-sides-divider span {
+      background: var(--bg-primary);
+      padding: 0 1rem;
+      relative: position;
+      color: var(--text-secondary);
+    }
+
+    @media (max-width: 768px) {
+      .auth-container {
+        grid-template-columns: 1fr;
+      }
+
+      .auth-side-visual {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-container">
+    <!-- Form Side -->
+    <div class="auth-form-side">
+      <div class="auth-form-wrapper">
+        <div class="auth-header">
+          <div class="auth-brand-logo">✨</div>
+          <h1>ProSpark</h1>
+          <p>Professional Cleaning Hub</p>
+        </div>
+
+        <!-- Login Form -->
+        <form id="login-form">
+          <h2 style="text-align: center; margin-bottom: 1.5rem;">Sign In</h2>
+
+          <div class="form-group">
+            <label for="login-email">Email Address</label>
+            <input type="email" id="login-email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="••••••••" required>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <label style="display: flex; align-items: center; gap: 0.5rem; margin: 0; font-weight: normal;">
+              <input type="checkbox" id="remember-me">
+              <span>Remember me</span>
+            </label>
+            <a href="#forgot" style="color: var(--color-champagne-gold); font-size: 0.875rem;">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Sign In</button>
+
+          <div class="auth-sides-divider">
+            <span>OR</span>
+          </div>
+
+          <p style="text-align: center; color: var(--text-secondary); margin-bottom: 1rem;">
+            Don't have an account? <a href="signup.html" style="color: var(--color-champagne-gold);">Create account</a>
+          </p>
+        </form>
+
+        <!-- Demo Credentials -->
+        <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 0.75rem; margin-top: 2rem;">
+          <p style="font-weight: bold; margin: 0 0 0.5rem 0; color: var(--text-primary);">Demo Credentials:</p>
+          <p style="margin: 0.25rem 0; color: var(--text-secondary); font-size: 0.875rem;">
+            <strong>Admin:</strong> elvis@prospark.ke / password123
+          </p>
+          <p style="margin: 0.25rem 0; color: var(--text-secondary); font-size: 0.875rem;">
+            <strong>Customer:</strong> john@example.com / password123
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visual Side -->
+    <div class="auth-side-visual">
+      <div style="text-align: center; padding: 2rem;">
+        <div style="font-size: 5rem; margin-bottom: 2rem;">🧹</div>
+        <h2>Welcome Back</h2>
+        <p style="font-size: 1.125rem; color: var(--color-pearl-white); opacity: 0.9; margin-bottom: 2rem;">
+          Sign in to access your bookings, manage your profile, and enjoy our premium cleaning services.
+        </p>
+        <div class="auth-side-content" style="text-align: left; display: inline-block;">
+          <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+            <span style="font-size: 1.5rem;">✓</span>
+            <div>
+              <p style="margin: 0; font-weight: bold;">Easy Booking</p>
+              <p style="margin: 0; opacity: 0.8; font-size: 0.875rem;">Schedule services in minutes</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+            <span style="font-size: 1.5rem;">✓</span>
+            <div>
+              <p style="margin: 0; font-weight: bold;">Real-time Updates</p>
+              <p style="margin: 0; opacity: 0.8; font-size: 0.875rem;">Track your bookings in real time</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 1rem;">
+            <span style="font-size: 1.5rem;">✓</span>
+            <div>
+              <p style="margin: 0; font-weight: bold;">Loyalty Rewards</p>
+              <p style="margin: 0; opacity: 0.8; font-size: 0.875rem;">Earn points on every booking</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alert Container -->
+  <div id="alerts-container"></div>
+
+  <script src="js/core/enterpriseServices.js"></script>
+  <script src="js/auth/enterpriseAuth.js"></script>
+  <script src="js/crm/crmManager.js"></script>
+  <script src="js/finance/financeManager.js"></script>
+  <script src="js/operations/operationsManager.js"></script>
+  <script src="js/analytics/analyticsEngine.js"></script>
+  <script src="js/admin/adminManager.js"></script>
+  <script src="js/mobile/mobileManager.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

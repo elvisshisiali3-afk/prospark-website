@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ProSpark Cleaning Hub - Customer Dashboard">
+  <title>Dashboard - ProSpark Cleaning Hub</title>
+  
+  <link rel="manifest" href="manifest.json">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-brand">
+      <span class="nav-brand-icon">✨</span>
+      <span>ProSpark</span>
+    </div>
+    
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="booking.html">Book Service</a></li>
+    </ul>
+    
+    <div class="nav-actions">
+      <button id="theme-toggle" style="background: none; border: none; color: var(--color-pearl-white); font-size: 1.25rem; cursor: pointer;">☀️</button>
+      <button id="logout-btn" class="btn btn-secondary btn-sm">Logout</button>
+      <button class="hamburger">☰</button>
+    </div>
+  </nav>
+
+  <!-- Dashboard Wrapper -->
+  <div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <h3 style="color: var(--color-champagne-gold); margin-top: 0;">Dashboard</h3>
+      <ul class="sidebar-menu">
+        <li><a href="#overview" class="active">📊 Overview</a></li>
+        <li><a href="#bookings">📅 My Bookings</a></li>
+        <li><a href="#profile">👤 Profile</a></li>
+        <li><a href="#loyalty">⭐ Loyalty Points</a></li>
+        <li><a href="#invoices">📄 Invoices</a></li>
+        <li><a href="#settings">⚙️ Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="dashboard-content">
+      <!-- Header -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <div>
+          <h1 id="user-greeting" style="margin: 0;">Welcome</h1>
+          <p id="user-email" style="color: var(--text-secondary); margin: 0; font-size: 0.875rem;"></p>
+        </div>
+        <p style="text-align: right; color: var(--text-secondary);">
+          Last login: <strong>Today</strong>
+        </p>
+      </div>
+
+      <!-- Dashboard Stats -->
+      <div id="dashboard-stats"></div>
+
+      <!-- Tabs -->
+      <div class="tabs" style="margin-top: 2rem;">
+        <button class="tab-button active" data-tab="overview">Overview</button>
+        <button class="tab-button" data-tab="bookings">My Bookings</button>
+        <button class="tab-button" data-tab="profile">Profile</button>
+        <button class="tab-button" data-tab="invoices">Invoices</button>
+      </div>
+
+      <!-- Overview Tab -->
+      <div data-tab-content="overview" class="tab-content active">
+        <div class="grid grid-cols-2" style="margin-top: 2rem;">
+          <div>
+            <h3>Quick Actions</h3>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <a href="booking.html" class="btn btn-primary btn-lg">📅 Book New Service</a>
+              <button class="btn btn-secondary btn-lg" onclick="document.querySelector('[data-tab-button=\"profile\"]').click()">
+                👤 Edit Profile
+              </button>
+            </div>
+          </div>
+
+          <div id="loyalty-points"></div>
+        </div>
+
+        <div style="margin-top: 2rem;">
+          <h3>Recent Services</h3>
+          <div id="bookings-list"></div>
+        </div>
+      </div>
+
+      <!-- Bookings Tab -->
+      <div data-tab-content="bookings" class="tab-content" style="margin-top: 1rem;">
+        <h3>All My Bookings</h3>
+        <div id="bookings-list"></div>
+      </div>
+
+      <!-- Profile Tab -->
+      <div data-tab-content="profile" class="tab-content" style="margin-top: 1rem;">
+        <div class="grid grid-cols-2" style="gap: 2rem;">
+          <!-- Profile Form -->
+          <div>
+            <h3>Profile Information</h3>
+            <form id="profile-form">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" id="profile-name" required>
+              </div>
+
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" id="profile-email" required>
+              </div>
+
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" id="profile-phone" required>
+              </div>
+
+              <div class="form-group">
+                <label>Address</label>
+                <input type="text" id="profile-address" placeholder="Your address">
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+            </form>
+          </div>
+
+          <!-- Change Password -->
+          <div>
+            <h3>Security</h3>
+            <form id="password-form">
+              <div class="form-group">
+                <label>Current Password *</label>
+                <input type="password" id="old-password" required>
+              </div>
+
+              <div class="form-group">
+                <label>New Password *</label>
+                <input type="password" id="new-password" minlength="8" required>
+              </div>
+
+              <div class="form-group">
+                <label>Confirm New Password *</label>
+                <input type="password" id="confirm-password" required>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Change Password</button>
+            </form>
+
+            <hr style="border: none; border-top: 1px solid var(--border-color); margin: 2rem 0;">
+
+            <h4>Delete Account</h4>
+            <p style="color: var(--text-secondary);">Once you delete your account, there is no going back. Please be certain.</p>
+            <button class="btn btn-danger btn-block" onclick="alert('Account deletion requires admin verification. Please contact support.')">
+              Delete Account
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Invoices Tab -->
+      <div data-tab-content="invoices" class="tab-content" style="margin-top: 1rem;">
+        <h3>Invoices & Receipts</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Invoice ID</th>
+              <th>Service</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="invoices-list"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h4>ProSpark</h4>
+          <p>Professional cleaning services</p>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+254799802509">+254 799 802 509</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider">
+        <p>&copy; 2026 ProSpark Cleaning Hub Limited. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Alert Container -->
+  <div id="alerts-container"></div>
+
+  <script src="js/core/enterpriseServices.js"></script>
+  <script src="js/auth/enterpriseAuth.js"></script>
+  <script src="js/crm/crmManager.js"></script>
+  <script src="js/finance/financeManager.js"></script>
+  <script src="js/operations/operationsManager.js"></script>
+  <script src="js/analytics/analyticsEngine.js"></script>
+  <script src="js/admin/adminManager.js"></script>
+  <script src="js/mobile/mobileManager.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/dashboard.js"></script>
+
+  <script>
+    // Setup tab switching
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', (e) => {
+          const tabName = e.target.getAttribute('data-tab');
+          
+          document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+          e.target.classList.add('active');
+          
+          document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+          });
+          
+          document.querySelector(`[data-tab-content="${tabName}"]`)?.classList.add('active');
+        });
+      });
+
+      // Setup sidebar navigation
+      document.querySelectorAll('.sidebar-menu a').forEach(link => {
+        link.addEventListener('click', (e) => {
+          const href = e.target.getAttribute('href');
+          const tabMap = {
+            '#overview': 'overview',
+            '#bookings': 'bookings',
+            '#profile': 'profile',
+            '#loyalty': 'overview',
+            '#invoices': 'invoices'
+          };
+
+          const tabName = tabMap[href];
+          if (tabName) {
+            const button = document.querySelector(`[data-tab="${tabName}"]`);
+            button?.click();
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

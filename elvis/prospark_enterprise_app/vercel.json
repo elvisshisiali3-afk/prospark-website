@@ -1,0 +1,19 @@
+{
+  "name": "prospark-cleaning-hub",
+  "version": 2,
+  "builds": [
+    {
+      "src": "public",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "env": {
+    "VERCEL_URL": "production"
+  }
+}
